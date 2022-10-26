@@ -67,10 +67,10 @@ public class CustomList extends ArrayAdapter<City> {
      *for the first phase it will be empty
      * @param city
      */
-//    public void deleteCity(City city){
-//        if (cities.contains(city)) {
-//            cities.remove(cities.indexOf(city));}
-//    }
+    public void deleteCity(City city){
+        if (cities.contains(city)) {
+            cities.remove(cities.indexOf(city));}
+    }
 
     /**
      * this detects if cities has city
