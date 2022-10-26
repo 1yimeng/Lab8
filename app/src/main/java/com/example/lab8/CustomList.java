@@ -72,13 +72,13 @@ public class CustomList extends ArrayAdapter<City> {
             cities.remove(cities.indexOf(city));}
     }
 
-//    /**
-//     * this detects if cities has city
-//     * @param city
-//     */
-//    public boolean hasCity(City city){
-//        return cities.contains(city);
-//    }
+    /**
+     * this detects if cities has city
+     * @param city
+     */
+    public boolean hasCity(City city){
+        return cities.contains(city);
+    }
 
 
 }

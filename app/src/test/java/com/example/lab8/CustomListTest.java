@@ -49,14 +49,12 @@ public class CustomListTest {
     }
 
     /**
-     * get the size of the list
-     * increase the list by adding a new city and decrease the list by deleting the city
-     * check if our current size matches the initial size
+     * add a city and test if the cities have city that was just added
+     * 
      */
     @Test
     public void hasCityTest(){
         CustomList list = createList();
-        int listSize = list.getCount();
         City myCity = new City("Estevan", "SK");
         list.addCity(myCity);
         boolean has = list.hasCity(myCity);
