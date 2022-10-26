@@ -10,14 +10,13 @@ import java.util.ArrayList;
 
 public class CustomListTest {
 
-    private CustomList list;
 
     /**
      * we create a CustomList object before running
      */
-    @Before
-    public void createList(){
-        list = new CustomList(null,new ArrayList<City>());
+    public CustomList createList(){
+        CustomList list = new CustomList(null,new ArrayList<City>());
+        return list;
     }
 
     /**
@@ -28,22 +27,25 @@ public class CustomListTest {
      */
     @Test
     public void addCityTest(){
+        CustomList list = createList();
         int listSize = list.getCount();
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
 
-//    /**
-//     * get the size of the list
-//     * increase the list by adding a new city
-//     * check if our current size matches the initial size plus
-//     one
-//     */
-//    @Test
-//    public void deleteCityTest(){
-//        int listSize = list.getCount();
-//        list.addCity(new City("Estevan", "SK"));
-//        list.deleteCity(new City("Estevan", "SK"));
-//        assertEquals(list.getCount(), listSize);
-//    }
+    /**
+     * get the size of the list
+     * increase the list by adding a new city
+     * check if our current size matches the initial size plus
+     one
+     */
+    @Test
+    public void deleteCityTest(){
+        CustomList list = createList();
+        int listSize = list.getCount();
+        City myCity = new City("Estevan", "SK");
+        list.addCity(myCity);
+        list.deleteCity(myCity);
+        assertEquals(listSize, list.getCount());
+    }
 }
