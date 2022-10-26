@@ -50,7 +50,7 @@ public class CustomListTest {
 
     /**
      * add a city and test if the cities have city that was just added
-     * 
+     *
      */
     @Test
     public void hasCityTest(){
@@ -60,4 +60,19 @@ public class CustomListTest {
         boolean has = list.hasCity(myCity);
         assertEquals(has, true);
     }
+
+    /**
+     * add a city and test if the cities have city that was just added
+     *
+     */
+    @Test
+    public void getCountTest(){
+        CustomList list = createList();
+        City myCity = new City("Estevan", "SK");
+        list.addCity(myCity);
+        int count = list.getCount();
+        assertEquals(1, count);
+    }
+
+
 }
